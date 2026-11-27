@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HeaderTap help</title>
+<meta name="description" content="HeaderTap adds, changes or removes HTTP request and response headers on the sites you choose. It runs on Chrome's own rule engine. There's no account, no t">
 <link rel="icon" href="icon-128.png">
 <style>
 :root { color-scheme: light dark; --brand: #0e7c66; }
@@ -39,6 +40,7 @@ footer { margin-top: 40px; font-size: 14px; opacity: .8; border-top: 1px solid r
 <h2>Site access, and why both sites matter</h2>
 <p>HeaderTap installs with access to no site. Chrome only changes a request when HeaderTap is allowed on <strong>both</strong> the request's site and the page that sends it. So if your app at app.example.com calls api.example.net, allow both. The <strong>Site access</strong> panel lists the sites a profile's filters name that aren't allowed yet, each with an <strong>Allow</strong> button. You can remove access there at any time. <strong>Allow all sites</strong> is there if you want it, behind Chrome's own prompt.</p>
 <h2>Importing from ModHeader</h2>
+<p>Moving over for good? See <a href="moving-from-modheader/">Moving your header profiles from ModHeader</a>.</p>
 <p>In ModHeader, export your profiles as JSON and copy the text, or save the file. In HeaderTap, click <strong>Import</strong>, paste the text or choose the file, and click <strong>Check</strong>. HeaderTap shows how many profiles, headers and filters it found and imported, and lists anything it couldn't bring across, with the reason. Then click <strong>Add profiles</strong>. Imported profiles start turned off: look them over, then turn each on with its switch. HeaderTap reads the file in your browser and never uploads it. It doesn't open ModHeader share links (those need a network call); paste the JSON instead.</p>
 <p>HeaderTap is not affiliated with ModHeader. The name is used only to say which export format it reads.</p>
 <h2>When a header doesn't seem to change</h2>
