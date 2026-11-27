@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeaderTap help</title>
+<link rel="icon" href="icon-128.png">
+<style>
+:root { color-scheme: light dark; --brand: #0e7c66; }
+body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+header img { width: 40px; height: 40px; }
+header a { font-weight: 700; font-size: 20px; color: inherit; text-decoration: none; }
+nav a { margin-right: 14px; }
+a { color: var(--brand); }
+@media (prefers-color-scheme: dark) { a { color: #4cc3a4; } }
+h1 { font-size: 28px; line-height: 1.25; }
+h2 { font-size: 20px; margin-top: 28px; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 14px; background: rgba(127,127,127,.15); padding: 1px 4px; border-radius: 4px; }
+footer { margin-top: 40px; font-size: 14px; opacity: .8; border-top: 1px solid rgba(127,127,127,.3); padding-top: 12px; }
+</style>
+</head>
+<body>
+<header><img src="icon-128.png" alt=""><a href="">HeaderTap</a></header>
+<nav><a href="">Help</a><a href="privacy/">Privacy policy</a><a href="mailto:support@useopenslot.com">Support</a></nav>
+<main>
+<h1>HeaderTap help</h1>
+<p>HeaderTap adds, changes or removes HTTP request and response headers on the sites you choose. It runs on Chrome's own rule engine. There's no account, no tracking, and it makes no network requests. See the <a href="privacy/">privacy policy</a>.</p>
+<h2>Getting started</h2>
+<ul><li>Click the HeaderTap icon in Chrome's toolbar. (If it isn't there, click the puzzle-piece icon and pin HeaderTap.)</li><li>Under <strong>Request headers</strong>, type a header name and value, for example <code>X-Debug</code> and <code>1</code>.</li><li>Click <strong>Allow on</strong> the site you are on. Chrome asks you to confirm. HeaderTap changes headers only on sites you allow.</li><li>Reload the page. The <strong>Checks</strong> panel shows the changes in force and how many of this tab's requests they applied to.</li></ul>
+<p>For more room, click <strong>Full editor</strong> to open HeaderTap in a tab.</p>
+<h2>Profiles</h2>
+<p>A profile is a set of headers plus where they apply. Keep as many as you like, for example &quot;Staging API&quot;, &quot;Mobile UA&quot; and &quot;No cache&quot;, and turn each on or off. When two profiles set the same header, the one listed first wins. Use the arrows to reorder them. <strong>Pause all</strong> turns everything off at once, and the toolbar badge then reads &quot;off&quot;.</p>
+<h2>Set, Append, Remove</h2>
+<ul><li><strong>Set</strong> replaces the header's value, or adds the header if it is missing.</li><li><strong>Append</strong> adds your value to the existing one. Chrome allows this only for certain request headers, such as Accept-Language, Cookie, Cache-Control and User-Agent. HeaderTap tells you when a header isn't one of them. Response headers can always be appended.</li><li><strong>Remove</strong> takes the header out.</li></ul>
+<h2>Apply to: filters</h2>
+<p>With no filter, a profile applies on every site you have allowed. Add filters to narrow it:</p>
+<ul><li><strong>Domain</strong>: <code>api.example.com</code> covers that domain and its subdomains.</li><li><strong>URL filter</strong>: Chrome's pattern syntax, for example <code>||example.com/api/</code> or <code>/graphql</code>.</li><li><strong>Regex</strong>: a regular expression matched against the full URL.</li><li><strong>Not</strong> + domain leaves that domain alone.</li></ul>
+<h2>Site access, and why both sites matter</h2>
+<p>HeaderTap installs with access to no site. Chrome only changes a request when HeaderTap is allowed on <strong>both</strong> the request's site and the page that sends it. So if your app at app.example.com calls api.example.net, allow both. The <strong>Site access</strong> panel lists the sites a profile's filters name that aren't allowed yet, each with an <strong>Allow</strong> button. You can remove access there at any time. <strong>Allow all sites</strong> is there if you want it, behind Chrome's own prompt.</p>
+<h2>Importing from ModHeader</h2>
+<p>In ModHeader, export your profiles as JSON and copy the text, or save the file. In HeaderTap, click <strong>Import</strong>, paste the text or choose the file, and click <strong>Check</strong>. HeaderTap shows how many profiles, headers and filters it found and imported, and lists anything it couldn't bring across, with the reason. Then click <strong>Add profiles</strong>. HeaderTap reads the file in your browser and never uploads it. It doesn't open ModHeader share links (those need a network call); paste the JSON instead.</p>
+<p>HeaderTap is not affiliated with ModHeader. The name is used only to say which export format it reads.</p>
+<h2>When a header doesn't seem to change</h2>
+<ul><li>Is the profile on, with no ✗ in the Checks panel?</li><li>Is the site allowed, and so is the page making the request?</li><li>Did you reload after changing something? Requests already sent aren't changed.</li><li>Responses that a page's own service worker serves from its cache aren't changed by any extension's rules.</li><li>Chrome's developer tools show some headers as they were before extensions changed them. To be sure, check what your server received.</li></ul>
+<h2>Support</h2>
+<p>Email <a href="mailto:support@useopenslot.com">support@useopenslot.com</a>. Please describe the header, the site and what you expected. Never send passwords or tokens: HeaderTap support never needs them.</p>
+</main>
+<footer>HeaderTap is a product of OpenSlot LLC, PO Box 96, Paintsville, KY 41240. Support: <a href="mailto:support@useopenslot.com">support@useopenslot.com</a>.</footer>
+</body>
+</html>

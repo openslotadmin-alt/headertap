@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeaderTap privacy policy</title>
+<link rel="icon" href="../icon-128.png">
+<style>
+:root { color-scheme: light dark; --brand: #0e7c66; }
+body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+header img { width: 40px; height: 40px; }
+header a { font-weight: 700; font-size: 20px; color: inherit; text-decoration: none; }
+nav a { margin-right: 14px; }
+a { color: var(--brand); }
+@media (prefers-color-scheme: dark) { a { color: #4cc3a4; } }
+h1 { font-size: 28px; line-height: 1.25; }
+h2 { font-size: 20px; margin-top: 28px; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 14px; background: rgba(127,127,127,.15); padding: 1px 4px; border-radius: 4px; }
+footer { margin-top: 40px; font-size: 14px; opacity: .8; border-top: 1px solid rgba(127,127,127,.3); padding-top: 12px; }
+</style>
+</head>
+<body>
+<header><img src="../icon-128.png" alt=""><a href="../">HeaderTap</a></header>
+<nav><a href="../">Help</a><a href="../privacy/">Privacy policy</a><a href="mailto:support@useopenslot.com">Support</a></nav>
+<main>
+<h1>HeaderTap privacy policy</h1>
+<p><em>Effective November 27, 2026. HeaderTap is a product of OpenSlot LLC, PO Box 96, Paintsville, KY 41240, United States. Contact: <a href="mailto:support@useopenslot.com">support@useopenslot.com</a>.</em></p>
+<h2>The short version</h2>
+<p>HeaderTap does not collect, transmit, sell or share any data. It makes no network requests of its own and has no account, analytics, ads or tracking. Everything you set up stays in your own browser.</p>
+<h2>What HeaderTap stores, and where</h2>
+<ul><li><strong>Your profiles</strong>: the header names and values, and the filters you type. They are kept in your browser's extension storage (<code>chrome.storage.local</code>) on your own computer. They are not synced to your Google account by HeaderTap, and they are never sent to OpenSlot LLC or anyone else.</li><li><strong>A small status record</strong>: how many rules are in force. It is kept in session storage (<code>chrome.storage.session</code>) and cleared when Chrome closes.</li></ul>
+<p>Removing HeaderTap from Chrome deletes both.</p>
+<p>If you export your profiles, the file is saved where you choose. If you import a file, it is read in your browser and never uploaded.</p>
+<h2>What HeaderTap does not do</h2>
+<ul><li>It does not read the content of any web page.</li><li>It does not see, record or log your requests, responses or browsing history. Header changes are made by Chrome's own rule engine (declarativeNetRequest). Chrome applies the rules; HeaderTap is not in the path of your traffic.</li><li>It sends nothing to any server. HeaderTap makes no network requests at all.</li><li>It does not use cookies, fingerprinting or third-party code.</li></ul>
+<h2>Permissions, and why each is needed</h2>
+<ul><li><strong>declarativeNetRequestWithHostAccess</strong>: to add, change or remove the headers you list, through Chrome's own rules.</li><li><strong>storage</strong>: to keep your profiles in your browser.</li><li><strong>activeTab</strong>: when you open HeaderTap from the toolbar, to show the current tab's site (so you can allow it) and how many of that tab's requests your rules applied to. Nothing about the tab is stored or sent.</li><li>*<em>Optional site access (<code></em>://<em>/</em></code>)**: nothing is granted when you install HeaderTap. Chrome only applies header changes on sites you allow, so HeaderTap asks for each site you choose, one at a time, and Chrome shows its own prompt each time. You can remove a site's access at any time from the HeaderTap window.</li></ul>
+<h2>Headers you set can carry secrets</h2>
+<p>Tokens or cookies you type into a header value are stored in your browser's extension storage on your computer, like any extension setting. They are sent only in the requests you chose, to the sites your filters name. Anyone with access to your computer's browser profile can read them, and they appear in exports you make.</p>
+<h2>Children</h2>
+<p>HeaderTap is a developer tool and is not directed at children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at this address with a new effective date. We will never start collecting data without changing this policy first and saying so in the extension's listing.</p>
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:support@useopenslot.com">support@useopenslot.com</a>, or OpenSlot LLC, PO Box 96, Paintsville, KY 41240.</p>
+</main>
+<footer>HeaderTap is a product of OpenSlot LLC, PO Box 96, Paintsville, KY 41240. Support: <a href="mailto:support@useopenslot.com">support@useopenslot.com</a>.</footer>
+</body>
+</html>
